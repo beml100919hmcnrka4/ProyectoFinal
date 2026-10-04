@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño y Desarrollo del Sistema de Titulación - CECyTEM</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #00803a, #007e15);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .progreso-seccion {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .progreso-seccion h2 {
+            margin-top: 0;
+            color: #088523;
+            font-size: 1.3rem;
+        }
+
+        .barra-externa {
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            height: 25px;
+            width: 100%;
+            margin: 1rem 0;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .barra-interna {
+            background: linear-gradient(90deg, #026620, #04a141);
+            height: 100%;
+            width: 40%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: width 0.5s ease-in-out;
+        }
+
+        h2.titulo-seccion {
+            color: #087e30;
+            border-bottom: 2px solid #0b7537;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .etapa-contenedor {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .etapa-tarjeta {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 6px solid #077523;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 15px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .completado { background-color: #e2f0d9; color: #385723; }
+        .en-proceso { background-color: #fff2cc; color: #7f6000; }
+        .pendiente { background-color: #f2f2f2; color: #595959; }
+
+        .etapa-tarjeta h3 {
+            margin: 0.2rem 0 0.8rem 0;
+            color: #222;
+            font-size: 1.4rem;
+        }
+
+        .etapa-tarjeta p {
+            margin: 0 0 1rem 0;
+            color: #555;
+        }
+
+        .lista-tecnica {
+            background-color: #fcf8f9;
+            border: 1px solid #f2e6e8;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            margin: 0;
+        }
+
+        .lista-tecnica li {
+            margin-bottom: 0.5rem;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        .lista-tecnica strong {
+            color: #047a0e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e0e0e0;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fases de Construcción del Sistema de Información</h1>
+        <p>Ciclo de Vida del Software Aplicado al Portal de Gestión de Trámites - CECyTEM</p>
+    </header>
+
+    <main>
+        <section class="progreso-seccion">
+            <h2>Estatus Actual del Desarrollo del Sistema</h2>
+            <div class="barra-externa">
+                <div class="barra-interna">40% Completado</div>
+            </div>
+            <p><small>Actualmente nos encontramos traduciendo los requerimientos de la entrevista en la estructura técnica del software.</small></p>
+        </section>
+
+        <h2 class="titulo-seccion">Línea de Tiempo del Desarrollo Técnico</h2>
+        
+        <div class="etapa-contenedor">
+            
+            <div class="etapa-tarjeta">
+                <span class="badge completado">✓ Paso 1: Completado</span>
+                <h3>Análisis de Requerimientos</h3>
+                <p>En esta etapa inicial definimos el alcance del sistema de información con base en la entrevista realizada en Control Escolar. Establecimos qué necesidades operativas resolverá el módulo web.</p>
+                <ul class="lista-tecnica">
+                    <li><strong>Entregable:</strong> Documento formal con los 6 Requerimientos Funcionales (RF) y 5 No Funcionales (RNF).</li>
+                    <li><strong>Alcance aprobado:</strong> Creación de la plataforma de validación de documentos y alertas automáticas de estado.</li>
+                </ul>
+            </div>
+
+            <div class="etapa-tarjeta">
+                <span class="badge en-proceso"> Paso 2: En Proceso</span>
+                <h3>Diseño de Arquitectura y Base de Datos</h3>
+                <p>Estamos modelando la estructura técnica donde se guardará la información y cómo interactuarán las pantallas de la aplicación.</p>
+                <ul class="lista-tecnica">
+                    <li><strong>Base de Datos:</strong> Diseño de tablas esenciales como: <code>Alumnos</code>, <code>Documentos_Subidos</code>, <code>Estados_Tramite</code> e <code>Historial_Alertas</code>.</li>
+                    <li><strong>Diseño de Interfaz (Mockups):</strong> Creación visual de la barra de progreso que el alumno consultará desde su cuenta.</li>
+                </ul>
+            </div>
+
+            <div class="etapa-tarjeta">
+                <span class="badge pendiente"> Paso 3: Pendiente</span>
+                <h3>Codificación y Programación (Frontend y Backend)</h3>
+                <p>Etapa donde se escribe el código real de la plataforma usando tecnologías web funcionales.</p>
+                <ul class="lista-tecnica">
+                    <li><strong>Frontend (Vista):</strong> Desarrollo de las pantallas de carga de archivos (PDF/JPG) para los alumnos y el panel de administración para el personal del plantel.</li>
+                    <li><strong>Backend (Lógica):</strong> Programación de las reglas del negocio, el sistema de inicio de sesión seguro y las conexiones automáticas con el servidor de correo.</li>
+                </ul>
+            </div>
+
+            <div class="etapa-tarjeta">
+                <span class="badge pendiente"> Paso 4: Pruebas de Calidad (QA)</span>
+                <h3>Validación y Pruebas del Sistema</h3>
+                <p>Antes de poner en marcha la aplicación, realizaremos pruebas estrictas para asegurar que funcione correctamente y de manera segura bajo cualquier escenario.</p>
+                <ul class="lista-tecnica">
+                    <li><strong>Pruebas Funcionales:</strong> Confirmar que las alertas lleguen al correo del alumno si se le rechaza un documento.</li>
+                    <li><strong>Pruebas de Estrés:</strong> Verificar que la plataforma soporte la conexión simultánea de toda una generación de egresados sin volverse lenta.</li>
+                </ul>
+            </div>
+
+            <div class="etapa-tarjeta">
+                <span class="badge pendiente"> Paso 5: Implementación y Soporte</span>
+                <h3>Despliegue e Instalación en el Plantel</h3>
+                <p>Fase final del proyecto técnico donde el sistema se publica en internet para que la comunidad estudiantil y el personal de control escolar comiencen a utilizarlo formalmente.</p>
+                <ul class="lista-tecnica">
+                    <li><strong>Capacitación:</strong> Manual de usuario para el personal administrativo que revisará las solicitudes.</li>
+                    <li><strong>Mantenimiento:</strong> Monitoreo mensual de almacenamiento en servidor para respetar la regla de límite por archivo de 5 MB.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Proyecto Final de Abigail Demetrio, Miguel Nicolas y Luka Marquez</p>
+    </footer>
+
+</body>
+</html>
